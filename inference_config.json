@@ -1,0 +1,21 @@
+{
+  "model": "beit3_base_patch16_384_retrieval",
+  "task": "coco_retrieval",
+  "finetune": "./output_aac/checkpoint-best/mp_rank_00_model_states.pt",
+  "device": "cuda:1",
+  "output_dir": "./output",
+  "batch_size": 16,
+  "vocab_size": 64010,
+  "drop_path": 0.1,
+  "input_size": 384,
+  "sentencepiece_model": "./model/beit3.spm",
+  "checkpoint_activations": false,
+  "data_path": "./data/aac",
+  "num_max_bpe_tokens":64,
+  "model_key":"model|module",
+  "model_prefix":"",
+  "num_workers":10,
+  "eval": true,
+  "pin_mem":true,
+  "dist_eval": false
+}
